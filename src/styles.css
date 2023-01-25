@@ -1,0 +1,46 @@
+h1 {
+  margin: 30px;
+  color: rgb(0, 255, 161);
+  line-height: normal;
+}
+button {
+  display: block;
+  margin: 10px auto 30px auto;
+  border: 2px solid rgb(0, 255, 161);
+  background: rgb(0, 255, 161);
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 21px 32px;
+  border-radius: 30px;
+  transition: all 200ms ease;
+  box-shadow: rgba(37, 39, 89, 0.08) 0px 8px 8px 0;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #fff;
+  color: rgb(0, 255, 161);
+}
+.allDocument {
+  margin: auto;
+  padding: 0.1px;
+  background: linear-gradient(to right, #2c3e50, #bdc3c7);
+  text-align: center;
+}
+.allText {
+  display: block;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 15px;
+  margin-bottom: auto;
+  padding: 1%;
+  color: aliceblue;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: large;
+  background-color: #bdc3c7;
+  border-radius: 10px;
+}
+.imagen {
+  margin-top: 30px;
+}
