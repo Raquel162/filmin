@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Filmin</title>
+    <style>
+      h1 {
+        margin: 30px;
+        color: rgb(0, 255, 161);
+        line-height: normal;
+      }
+      button {
+        display: block;
+        margin: 10px auto 30px auto;
+        border: 2px solid rgb(0, 255, 161);
+        background: rgb(0, 255, 161);
+        color: #fff;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 18px;
+        font-weight: 500;
+        padding: 21px 32px;
+        border-radius: 30px;
+        transition: all 200ms ease;
+        box-shadow: rgba(37, 39, 89, 0.08) 0px 8px 8px 0;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #fff;
+        color: rgb(0, 255, 161);
+      }
+      .allDocument {
+        margin: auto;
+        padding: 0.1px;
+        background: linear-gradient(to right, #2c3e50, #bdc3c7);
+        text-align: center;
+      }
+      .allText {
+        display: block;
+        margin-left: 20%;
+        margin-right: 20%;
+        margin-top: 15px;
+        margin-bottom: auto;
+        padding: 1%;
+        color: aliceblue;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: large;
+        background-color: #bdc3c7;
+        border-radius: 10px;
+      }
+      .imagen {
+        margin-top: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="allDocument">
+      <h1>Filmin</h1>
+      <h2>Bringing independent films to the general public</h2>
+      <hr />
+      <div class="allText">
+        <p>
+          <strong>Comunidad Filmin S.L.</strong>, doing business as Filmin, is a
+          Spanish subscription video on demand streaming service, primarily
+          dedicated to streaming independent films, as well as a production
+          company and film distributor. The company headquarters is located in
+          Barcelona.
+        </p>
+        <p>
+          The platform has more than 9,000 titles, including films, mostly
+          independent, series and shorts. The content is categorized by Film
+          Genre (Animation, Drama, Comedy, Thriller, ...), tags and, what the
+          platform calls, <em>Moods</em> (What do you feel like watching
+          now...).
+        </p>
+      </div>
+
+      <div class="imagen">
+        <img
+          src="https://i1.wp.com/www.audiovisual451.com/wp-content/uploads/2020/12/filmin.jpg?resize=696%2C522&ssl=1"
+          alt="netflix"
+          width="300"
+        />
+      </div>
+      <br />
+      <button>Learn More</button>
+    </div>
+    <script>
+      function learnMore() {
+        let filmLover = prompt("Do you like independet films?");
+        filmLover = filmLover.toLowerCase().trim();
+        if (filmLover === "yes") {
+          alert("You will love Filmin! 🎞 ");
+          let allText = document.querySelector(".allText");
+          allText.innerHTML =
+            "<p> You should go to <a href='https://www.filmin.es'target='_blank'> FILMIN </a></p>";
+          let filminImg = document.querySelector(".imagen");
+          filminImg.innerHTML =
+            "<img src='https://i1.wp.com/www.audiovisual451.com/wp-content/uploads/2020/12/filmin.jpg?resize=696%2C522&ssl=1' alt='filmin' width='300'/>";
+          let h1 = document.querySelector("h1");
+          h1.innerHTML = "Filmin";
+          let button = document.querySelector("button");
+          button.innerHTML = "Change my answer";
+        } else {
+          alert("Keep enjoying Netflix! 🍿");
+          let allText = document.querySelector(".allText");
+          allText.innerHTML =
+            "<p> You should go to <a href='https://www.netflix.com'target='_blank'> NETFLIX </a></p>";
+          let netflixImg = document.querySelector(".imagen");
+          netflixImg.innerHTML =
+            "<img src='https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/netflix-1647515018.jpg?resize=480:*' alt='netflix' width='300'/>";
+          let h1 = document.querySelector("h1");
+          h1.innerHTML = "This page is not for you";
+          let h2 = document.querySelector("h2");
+          h2.innerHTML = "";
+          let button = document.querySelector("button");
+          button.innerHTML = "Change my answer";
+        }
+      }
+      let button = document.querySelector("button");
+      button.addEventListener("click", learnMore);
+    </script>
+  </body>
+</html>
